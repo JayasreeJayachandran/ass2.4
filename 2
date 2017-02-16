@@ -1,0 +1,29 @@
+Components of Hadoop framework:
+   Hadoop Framework is broadly classified into two namely
+       1.HDFS(Hadoop Distributed File System)-
+               >It is based on google GFS(Google File System) white paper.It is adistributed storage system.
+               >Provides redundant storage for massive amounts of data.HDFS works best with a smaller number of large files.
+               >Files in HDFS are write once.Optimized for streaming reads of large files and not random reads.Files are split into blocks.
+               >Blocks are split across many machines at load time
+               >Different blocks from the same file will be stored on different machines
+               >Blocks are replicated across multiple machines
+               >The NameNode keeps track of which blocks make up a file and where they are stored
+           HDFS has two main parts: 1.Master daemon,2.Backup master daemon ,3.Slave daemon
+             >Master daemon:It is called as namenode and acts as a high end admin machine which controls and knows all about the data node.
+             >Backup master daemon:It acts as a back up on the failure on master daemon .This is the new facility in hadoop 2.x.
+             >Slave daemon:It is called as data node and it stores data in various commodity machines.
+       2.MapReduce-
+               >It is based on google map reduce white paper.It is a distributed processing system.  
+               >A method for distributing computation across multiple nodes.Each node processes the data that is stored at that node.
+               >Consists of two main phases:Map,Reduce.
+               >Map reduce exhibits following features:
+                      -Automatic parallelization and distribution
+                      -Fault-Tolerance
+                      -Provides a clean abstraction for programmers to use
+             Map reduce has two parts:1.Master daemon,2.Slave daemon
+                >Master daemon: It is also called as resource manager.Determines the execution plan for the job.Assigns tasks.
+                >Slave daemon:It is also called as node manager.Keeps track of the performance of an individual mapper or reducer.
+
+
+
+            
